@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Вход{% endblock %}
+
+{% block content %}
+<header>
+    <h1>Вход</h1>
+    <p class="subtitle">Введи свои данные для входа</p>
+</header>
+
+<form method="post" class="auth-form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="upload-btn">Войти</button>
+</form>
+
+<p style="text-align:center; margin-top:15px;">
+    Нет аккаунта?
+    <a href="{% url 'register' %}" style="color:#5a9367; font-weight:600;">Создать</a>
+</p>
+{% endblock %}
