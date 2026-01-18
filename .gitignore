@@ -1,0 +1,42 @@
+# Python
+*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+.venv/
+venv/
+env/
+ENV/
+
+# Database
+*.sqlite3
+db.sqlite3
+
+# Media files
+media/
+dataset/
+
+# Model files (слишком большие)
+*.pkl
+*.pth
+*.h5
+*.weights
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Gradio
+.gradio/
+
+# Logs
+*.log
+output_model_*.txt
+
+# OS
+.DS_Store
+Thumbs.db

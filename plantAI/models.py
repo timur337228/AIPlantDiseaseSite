@@ -10,4 +10,5 @@ class PlantInfo(models.Model):
     )
     image = models.ImageField(upload_to='plant_images/', blank=True, null=True)
     prediction = models.JSONField(default=list, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
     

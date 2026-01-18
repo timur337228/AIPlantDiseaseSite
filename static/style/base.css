@@ -5,6 +5,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
 body {
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     min-height: 100vh;
@@ -234,4 +235,80 @@ footer {
     .container {
         padding: 20px;
     }
+}
+
+css/* Стили для форм регистрации и входа */
+.auth-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0;  /* Убрали padding */
+    background: transparent;  /* Убрали фон */
+    border: none;  /* Убрали рамку */
+}
+
+.auth-form p {
+    margin-bottom: 20px;
+}
+
+.auth-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2c5530;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.auth-form input[type="text"],
+.auth-form input[type="password"],
+.auth-form input[type="email"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #d0e4d5;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+.auth-form input:focus {
+    outline: none;
+    border-color: #5a9367;
+    box-shadow: 0 0 0 3px rgba(90, 147, 103, 0.1);
+}
+
+.auth-form input:hover {
+    border-color: #5a9367;
+}
+
+.auth-form .errorlist {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0 0;
+}
+
+.auth-form .errorlist li {
+    color: #c62828;
+    font-size: 0.9rem;
+    background: #ffebee;
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin-top: 5px;
+    border-left: 3px solid #f44336;
+}
+
+.auth-form .helptext {
+    display: block;
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+.auth-form .upload-btn {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.auth-form ul {
+    list-style: none;
+    padding: 0;
 }
