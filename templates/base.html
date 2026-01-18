@@ -48,7 +48,7 @@
         <a href="/">🏠 Главная</a>
         <div>
             {% if user.is_authenticated %}
-                <span class="user-email">{{ user.email }}</span>
+                <a href="{% url 'my_preds' %}"><span class="user-email">{{ user.email }}</span></a>
                 <a href="{% url 'logout' %}" style="margin-left: 15px;">Выйти</a>
             {% else %}
                 <a href="{% url 'login' %}">Войти</a>
@@ -62,7 +62,7 @@
     </div>
 
     <footer>
-        <p>AI детектор заболеваний растений &copy; 2025 | Проект разработан для ДальГАУ</p>
+        <p>AI детектор заболеваний растений &copy; 2026 | Проект разработан для ДальГАУ</p>
     </footer>
 </body>
 </html>

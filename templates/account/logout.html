@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="alert alert-success">
+    <h3>✅ Успешно!</h3>
+    <p>{{ message|default:"Операция выполнена успешно" }}</p>
+    <a href="/" class="btn btn-primary">На главную</a>
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Мои предсказания</h2>
+
+    {% if plants %}
+        <div class="plant-list">
+            {% for plant in plants %}
+                <div class="plant-item">
+                    <img src="{{ plant.image.url }}" alt="plant image" width="200px">
+                    <p><b>Лучшее предсказание:</b> {{ plant.prediction.0.label }}</p>
+                    <p><b>Вероятность:</b> {{ plant.prediction.0.confidence|floatformat:2 }}</p>
+                    <p><b>Все предсказания:</b><br>
+                        {% for pred in plant.prediction|slice:"1:" %}
+                            {{ pred.label }} – {{ pred.confidence|floatformat:2 }}<br>
+                        {% endfor %}
+                    </p>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>У вас пока нет сохранённых предсказаний.</p>
+    {% endif %}
+
+{% endblock %}
